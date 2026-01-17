@@ -9,11 +9,11 @@ use Ovesio\OvesioAI;
 use OvesioModel;
 use PrestaShop\Module\Ovesio\Support\OvesioConfiguration;
 use PrestaShop\Module\Ovesio\Support\TplSupport;
-use PrestaShopBundle\Controller\Admin\PrestaShopAdminController;
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 use Symfony\Component\HttpFoundation\Response;
 use Tools;
 
-class ConfigureController extends PrestaShopAdminController
+class ConfigureController extends FrameworkBundleAdminController
 {
     use TplSupport;
 

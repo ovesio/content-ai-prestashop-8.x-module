@@ -543,7 +543,7 @@ select.ov-form-control-lg {
 }
 
 .ov-btn-secondary {
-  color: #fff;
+  color: #fff!important;
   background-color: #6c757d;
   border-color: #6c757d;
 }

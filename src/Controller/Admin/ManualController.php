@@ -5,10 +5,10 @@ namespace PrestaShop\Module\Ovesio\Controller\Admin;
 use Configuration;
 use PrestaShop\Module\Ovesio\Support\OvesioConfiguration;
 use PrestaShop\Module\Ovesio\Support\TplSupport;
-use PrestaShopBundle\Controller\Admin\PrestaShopAdminController;
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 use Tools;
 
-class ManualController extends PrestaShopAdminController
+class ManualController extends FrameworkBundleAdminController
 {
     public const TAB_CLASS_NAME = 'AdminOvesioManual';
 

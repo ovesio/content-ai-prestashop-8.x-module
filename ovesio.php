@@ -4,7 +4,9 @@ if (!defined('_PS_VERSION_')) {
 }
 
 require_once __DIR__ . '/autoload.php';
-require_once __DIR__ . '/vendor/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
 use Ovesio\OvesioAI;
 use Ovesio\QueueHandler;
@@ -25,7 +27,7 @@ class Ovesio extends Module
         $this->author = 'Aweb Design';
         $this->need_instance = 0;
         $this->bootstrap = true;
-        $this->ps_versions_compliancy = ['min' => '9.0.0', 'max' => '9.99.99'];
+        $this->ps_versions_compliancy = ['min' => '8.0.0', 'max' => '8.99.99'];
 
         parent::__construct();
 

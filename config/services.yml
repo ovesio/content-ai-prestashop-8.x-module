@@ -11,10 +11,4 @@ services:
     autowire: true
     autoconfigure: true
 
-  PrestaShop\Module\Ovesio\Controller\Front\CallbackController:
-    autowire: true
-    autoconfigure: true
 
-  PrestaShop\Module\Ovesio\Controller\Front\CronController:
-    autowire: true
-    autoconfigure: true

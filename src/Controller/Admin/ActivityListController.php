@@ -8,11 +8,11 @@ use DateTime;
 use Exception;
 use OvesioModel;
 use PrestaShop\Module\Ovesio\Support\TplSupport;
-use PrestaShopBundle\Controller\Admin\PrestaShopAdminController;
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 use Symfony\Component\HttpFoundation\Response;
 use Tools;
 
-class ActivityListController extends PrestaShopAdminController
+class ActivityListController extends FrameworkBundleAdminController
 {
     use TplSupport;
 

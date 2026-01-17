@@ -12,7 +12,7 @@ The Ovesio AI Module integrates PrestaShop with [Ovesio.com](https://ovesio.com/
 
 ### Compatibility
 
-- Fully compatible with PrestaShop 9.0+
+- Fully compatible with PrestaShop 8.0+
 - Built with modern PrestaShop architecture using Symfony controllers
 
 ### Translation Capabilities
@@ -83,7 +83,7 @@ From the AI Description Generator section:
 
 ### Step 1: Upload and Install the Module
 
-1.  **Download:** Download the zip archive called `ovesio.zip` from the [GitHub repository](https://github.com/ovesio/ovesio-translate-prestashop-9.x/releases) releases section.
+1.  **Download:** Download the zip archive called `ovesio.zip` from the [GitHub repository](https://github.com/ovesio/ovesio-translate-prestashop-8.x/releases) releases section.
 2.  **Upload:**
     *   Log in to your PrestaShop Admin Panel (Back Office).
     *   Navigate to **Improve** > **Modules** > **Module Manager**.
@@ -139,13 +139,13 @@ From the AI Description Generator section:
 ### Requirements
 
 - PHP >= 7.2.5
-- PrestaShop 9.0.0 or higher
+- PrestaShop 8.0.0 or higher
 - Composer (for development)
 - Valid Ovesio API Token
 
 ### Module Structure
 
-The module follows PrestaShop 9 best practices:
+The module follows PrestaShop 8.x best practices:
 
 - **Controllers**: Symfony-based admin controllers in `src/Controller/Admin/`
 - **Models**: Database operations in `model/`
