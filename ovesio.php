@@ -31,39 +31,39 @@ class Ovesio extends Module
 
         parent::__construct();
 
-        $this->displayName = $this->l('Ovesio AI');
+        $this->displayName = $this->l('Ovesio - Content AI');
         $this->description = $this->l('AI Content Generation for PrestaShop');
 
         // Load language strings
         $this->loadKeyValueLanguages();
 
         // Define tabs
-        $tabNames = [];
-        foreach (Language::getLanguages(true) as $lang) {
-            $tabNames[$lang['locale']] = $this->l('Ovesio AI');
-        }
+        // $tabNames = [];
+        // foreach (Language::getLanguages(true) as $lang) {
+        //     $tabNames[$lang['locale']] = $this->l('Ovesio AI');
+        // }
 
         $tabActivityNames = [];
         foreach (Language::getLanguages(true) as $lang) {
-            $tabActivityNames[$lang['locale']] = $this->l('Ovesio AI');
+            $tabActivityNames[$lang['locale']] = $this->l('Ovesio AI - Activity List');
         }
 
         $this->tabs = [
-            [
-                'route_name' => 'admin_ovesio_configure',
-                'class_name' => ConfigureController::TAB_CLASS_NAME,
-                'visible' => true,
-                'name' => $tabNames,
-                'icon' => 'science',
-                'parent_class_name' => 'AdminCatalog',
-            ],
+            // [
+            //     'route_name' => 'admin_ovesio_configure',
+            //     'class_name' => ConfigureController::TAB_CLASS_NAME,
+            //     'visible' => true,
+            //     'name' => $tabNames,
+            //     'icon' => 'science',
+            //     'parent_class_name' => 'AdminCatalog',
+            // ],
             [
                 'route_name' => 'admin_ovesio_activity_list',
                 'class_name' => \PrestaShop\Module\Ovesio\Controller\Admin\ActivityListController::TAB_CLASS_NAME,
                 'visible' => true,
                 'name' => $tabActivityNames,
                 'icon' => 'science',
-                'parent_class_name' => 'SELL',
+                'parent_class_name' => 'AdminCatalog',
             ],
         ];
     }
