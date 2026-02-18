@@ -11,6 +11,7 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 use Ovesio\OvesioAI;
 use Ovesio\QueueHandler;
 use PrestaShop\Module\Ovesio\Controller\Admin\ConfigureController;
+use PrestaShop\Module\Ovesio\Controller\Admin\ActivityListController;
 use PrestaShop\Module\Ovesio\Controller\Admin\ManualController;
 use PrestaShop\Module\Ovesio\Support\OvesioConfiguration;
 use PrestaShop\Module\Ovesio\Support\OvesioLog;
@@ -59,7 +60,7 @@ class Ovesio extends Module
             // ],
             [
                 'route_name' => 'admin_ovesio_activity_list',
-                'class_name' => \PrestaShop\Module\Ovesio\Controller\Admin\ActivityListController::TAB_CLASS_NAME,
+                'class_name' => ActivityListController::TAB_CLASS_NAME,
                 'visible' => true,
                 'name' => $tabActivityNames,
                 'icon' => 'science',
