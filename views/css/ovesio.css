@@ -2609,3 +2609,70 @@ select.ov-form-control-lg {
   margin-bottom: 0px !important;
   font-size: 14px;
 }
+
+/* ================================
+   CRON SECTION
+   ================================ */
+
+.ov-cron-section {
+  width: 100%;
+}
+
+.ov-cron-section .ov-form-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.ov-cron-section .ov-form-label {
+  flex: 0 0 200px;
+  max-width: 200px;
+  padding-top: 0.5em;
+  font-weight: 500;
+}
+
+.ov-cron-section .ov-input-group,
+.ov-cron-section .ov-cron-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ov-input-group {
+  display: flex;
+  align-items: stretch;
+}
+
+.ov-input-group .ov-form-control {
+  flex: 1;
+  min-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ov-input-group .ov-btn-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375em 0.75em;
+  border: 1px solid #ced4da;
+  border-left: none;
+  border-radius: 0 0.375em 0.375em 0;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.ov-input-group .ov-btn-copy:hover {
+  background-color: #e9ecef;
+}
+
+.ov-input-group .ov-btn-copy.ov-btn-success {
+  background-color: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+
+.ov-cron-readonly {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+}

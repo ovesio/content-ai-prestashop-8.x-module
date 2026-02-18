@@ -447,3 +447,29 @@ ovesio.translate = function(e) {
     setTimeout(() => alert.remove(), 5000);
   });
 }
+
+// Copy button handler for cron URL fields
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.ov-btn-copy');
+  if (!btn) return;
+
+  const inputGroup = btn.closest('.ov-input-group');
+  if (!inputGroup) return;
+
+  const input = inputGroup.querySelector('input');
+  if (!input) return;
+
+  // Select and copy using fallback method (works on HTTP too)
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  input.setSelectionRange(0, 0);
+
+  btn.classList.add('ov-btn-success');
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+  setTimeout(function() {
+    btn.classList.remove('ov-btn-success');
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+  }, 2000);
+});
