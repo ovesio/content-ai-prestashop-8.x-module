@@ -2,7 +2,7 @@
 
 ## License and Disclaimer
 
-This package is released under the MIT License. We are not responsible for any malfunction or improper behavior caused by the use of this package. This package is provided as an example integration. For production-ready integrations, we highly recommend using our official API endpoints and documentation, available at [https://ovesio.com/docs](https://ovesio.com/docs).
+This package is released under the MIT License. We are not responsible for any malfunction or improper behavior caused by the use of this package. This package is provided as an example integration. For production-ready integrations, we highly recommend using our official API endpoints and documentation, available at [https://docs.ovesio.com](https://docs.ovesio.com).
 
 ## Overview
 
@@ -90,6 +90,7 @@ From the AI Description Generator section:
     *   Click the **Upload a module** button.
     *   Select or drag & drop the downloaded zip archive.
     *   Click the **Install** button.
+    *  Important: Before configuring the module, ensure you have installed the required language packs in International > Localization > Import a localization pack. Ovesio translates store content, but system files must be installed via these packs. These languages will then be available for configuration in the Translate Settings tab.
     *   After installation, click the **Configure** button.
 
 ### Step 2: Configure the Module
@@ -232,7 +233,7 @@ Current version: 1.1.0
 
 ## Support
 
-This module is developed and maintained by Aweb Design SRL for Ovesio.com. For documentation and API references, visit [https://ovesio.com/docs](https://ovesio.com/docs).
+This module is developed and maintained by Aweb Design SRL for Ovesio.com. For documentation and API references, visit [https://docs.ovesio.com](https://docs.ovesio.com).
 
 For technical support or bug reports, you may contact Ovesio support. Support is provided on a best-effort basis.
 
