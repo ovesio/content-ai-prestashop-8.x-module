@@ -341,14 +341,15 @@ ovesio.generateContent = function(e) {
   const url   = btn.getAttribute('data-href');
   const route = btn.getAttribute('data-route');
 
-  const form = document.querySelector('form.table-responsive');
+  const form = document.querySelector('form.table-responsive') || document.querySelector('#form-attribute_group') || document.querySelector('#form-attribute_values') || document.querySelector('#form-feature') || document.querySelector('#form-feature_value') || document.querySelector('form[id^="form-"]') || document.querySelector('.content-div form');
   if (!form) {
     console.error('Form not found');
-    return;
   }
 
   const selected = [];
-  form.querySelectorAll('.js-bulk-action-checkbox:checked').forEach(checkbox => {
+  const checkboxSelector = '.js-bulk-action-checkbox:checked, input[name="attribute_groupBox[]"]:checked, input[name="attribute_valuesBox[]"]:checked, input[name="featureBox[]"]:checked, input[name="feature_valueBox[]"]:checked';
+  const container = form || document;
+  container.querySelectorAll(checkboxSelector).forEach(checkbox => {
     selected.push(checkbox.value);
   })
 
@@ -365,7 +366,8 @@ ovesio.generateContent = function(e) {
     }
 
     alert.classList.add('ov-mt-3');
-    form.parentNode.insertBefore(alert, form);
+    const insertTarget = form || document.querySelector('.content-div') || document.querySelector('#content');
+    if (insertTarget) insertTarget.parentNode.insertBefore(alert, insertTarget);
     setTimeout(() => alert.remove(), 5000);
   });
 }
@@ -380,14 +382,15 @@ ovesio.generateSeo = function(e) {
   const url   = btn.getAttribute('data-href');
   const route = btn.getAttribute('data-route');
 
-  const form = document.querySelector('form.table-responsive');
+  const form = document.querySelector('form.table-responsive') || document.querySelector('#form-attribute_group') || document.querySelector('#form-attribute_values') || document.querySelector('#form-feature') || document.querySelector('#form-feature_value') || document.querySelector('form[id^="form-"]') || document.querySelector('.content-div form');
   if (!form) {
     console.error('Form not found');
-    return;
   }
 
   const selected = [];
-  form.querySelectorAll('.js-bulk-action-checkbox:checked').forEach(checkbox => {
+  const checkboxSelector = '.js-bulk-action-checkbox:checked, input[name="attribute_groupBox[]"]:checked, input[name="attribute_valuesBox[]"]:checked, input[name="featureBox[]"]:checked, input[name="feature_valueBox[]"]:checked';
+  const container = form || document;
+  container.querySelectorAll(checkboxSelector).forEach(checkbox => {
     selected.push(checkbox.value);
   })
 
@@ -404,7 +407,8 @@ ovesio.generateSeo = function(e) {
     }
 
     alert.classList.add('ov-mt-3');
-    form.parentNode.insertBefore(alert, form);
+    const insertTarget = form || document.querySelector('.content-div') || document.querySelector('#content');
+    if (insertTarget) insertTarget.parentNode.insertBefore(alert, insertTarget);
     setTimeout(() => alert.remove(), 5000);
   });
 }
@@ -419,14 +423,15 @@ ovesio.translate = function(e) {
   const url   = btn.getAttribute('data-href');
   const route = btn.getAttribute('data-route');
 
-  const form = document.querySelector('form.table-responsive');
+  const form = document.querySelector('form.table-responsive') || document.querySelector('#form-attribute_group') || document.querySelector('#form-attribute_values') || document.querySelector('#form-feature') || document.querySelector('#form-feature_value') || document.querySelector('form[id^="form-"]') || document.querySelector('.content-div form');
   if (!form) {
     console.error('Form not found');
-    return;
   }
 
   const selected = [];
-  form.querySelectorAll('.js-bulk-action-checkbox:checked').forEach(checkbox => {
+  const checkboxSelector = '.js-bulk-action-checkbox:checked, input[name="attribute_groupBox[]"]:checked, input[name="attribute_valuesBox[]"]:checked, input[name="featureBox[]"]:checked, input[name="feature_valueBox[]"]:checked';
+  const container = form || document;
+  container.querySelectorAll(checkboxSelector).forEach(checkbox => {
     selected.push(checkbox.value);
   })
 
@@ -443,7 +448,8 @@ ovesio.translate = function(e) {
     }
 
     alert.classList.add('ov-mt-3');
-    form.parentNode.insertBefore(alert, form);
+    const insertTarget = form || document.querySelector('.content-div') || document.querySelector('#content');
+    if (insertTarget) insertTarget.parentNode.insertBefore(alert, insertTarget);
     setTimeout(() => alert.remove(), 5000);
   });
 }
