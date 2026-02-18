@@ -1595,6 +1595,48 @@ select.ov-form-control-lg {
   border: 1px solid #dee2e6;
 }
 
+/* CRON readonly fields - override disabled appearance */
+.ov-cron-section .ov-cron-readonly {
+  background-color: #f8f9fa !important;
+  cursor: text !important;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875em;
+  color: #495057;
+  border-color: #ced4da;
+  opacity: 1;
+}
+
+.ov-cron-section .ov-cron-readonly:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.2em rgba(13, 110, 253, 0.15);
+}
+
+/* Copy button for CRON fields */
+.ov-btn-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45em 0.6em !important;
+  min-width: 36px;
+  transition: all 0.2s ease;
+}
+
+.ov-btn-copy:hover {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+.ov-btn-copy.ov-copied {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: #fff !important;
+}
+
+.ov-btn-copy svg {
+  pointer-events: none;
+}
+
 /* Input group */
 .ov-input-group {
   display: flex;
