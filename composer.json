@@ -2,7 +2,7 @@
   "name": "ovesio/ovesio",
   "description": "Ovesio AI Module for PrestaShop 8.x",
   "type": "prestashop-module",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Aweb Design SRL"
