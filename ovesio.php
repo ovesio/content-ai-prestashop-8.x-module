@@ -23,7 +23,7 @@ class Ovesio extends Module
     {
         $this->name = 'ovesio';
         $this->tab = 'administration';
-        $this->version = '1.1.0';
+        $this->version = '1.2.0';
         $this->author = 'Aweb Design';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -43,6 +43,11 @@ class Ovesio extends Module
             $tabNames[$lang['locale']] = $this->l('Ovesio AI');
         }
 
+        $tabActivityNames = [];
+        foreach (Language::getLanguages(true) as $lang) {
+            $tabActivityNames[$lang['locale']] = $this->l('Ovesio AI');
+        }
+
         $this->tabs = [
             [
                 'route_name' => 'admin_ovesio_configure',
@@ -51,6 +56,14 @@ class Ovesio extends Module
                 'name' => $tabNames,
                 'icon' => 'science',
                 'parent_class_name' => 'AdminCatalog',
+            ],
+            [
+                'route_name' => 'admin_ovesio_activity_list',
+                'class_name' => \PrestaShop\Module\Ovesio\Controller\Admin\ActivityListController::TAB_CLASS_NAME,
+                'visible' => true,
+                'name' => $tabActivityNames,
+                'icon' => 'science',
+                'parent_class_name' => 'SELL',
             ],
         ];
     }
