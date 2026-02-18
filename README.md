@@ -246,7 +246,7 @@ ovesio/
 
 ## Version
 
-Current version: 1.2.0
+Current version: 1.2.1
 
 ## Support
 
